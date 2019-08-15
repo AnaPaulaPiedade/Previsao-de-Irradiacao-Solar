@@ -1,9 +1,10 @@
 # Indica diretório que vai trabalhar
-setwd('C:\\Users\\ana-p\\Desktop\\dados')
+setwd("C:/Users/ana-p/Desktop/Previsao_Irradiacao_Solar/Previsao-de-Irradiacao-Solar/dados_Originais");
 
 # lista todos os arquivos com extensão .csv
 input <- dir(pattern='.csv')
 L <- length(input)
+print(L);
 
 
 # Lendo arquivos e salvando em uma lista
@@ -50,10 +51,6 @@ comp <- data_completa[(data_completa$Hora >= "06:00:00" & data_completa$Hora <= 
 print(comp);
 
 comp <- as.matrix(comp);
-write.csv(comp, "joints/teste.csv", row.names = FALSE);
+write.csv(comp, "../dados_Preparados/joints/teste.csv", row.names = FALSE);
   
-
-
-### Cria diretório
-dir.create('~/caminho/')
 
