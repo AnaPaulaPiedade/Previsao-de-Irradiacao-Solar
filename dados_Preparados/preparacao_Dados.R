@@ -45,12 +45,14 @@ data_completa$Hora <- as.character(data_completa$Hora);
 
 
 #Filtro
-
-
 comp <- data_completa[(data_completa$Hora >= "06:00:00" & data_completa$Hora <= "18:00:00" ), ]
 print(comp);
 
 comp <- as.matrix(comp);
-write.csv(comp, "../dados_Preparados/joints/teste.csv", row.names = FALSE);
+write.csv(comp, "../dados_Preparados/joints/prep1Media_Marco2018.csv", row.names = FALSE)
   
+
+
+
+
 
